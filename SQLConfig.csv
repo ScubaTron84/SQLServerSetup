@@ -1,0 +1,68 @@
+#TYPE System.String, System.String, System.int
+"Entity","Key","Value"
+HOST,HostName,SOMEHOSTNAME123
+DISK1,DiskSize,600
+DISK1,DiskLabel,Data
+DISK1,DiskLetter,J
+DISK1,Type,DATA
+DISK1,Path,\MSSQL\Data
+DISK2,DiskSize,601
+DISK2,DiskLabel,Data
+DISK2,DiskLetter,K
+DISK2,Path,\MSSQL\Data
+DISK2,Type,DATA
+DISK3,DiskSize,602
+DISK3,DiskLabel,Log
+DISK3,DiskLetter,L
+DISK3,Path,\MSSQL\Log
+DISK3,Type,LOG
+DISK4,DiskSize,100
+DISK4,DiskLabel,SystemDB
+DISK4,DiskLetter,S
+DISK4,Path,\MSSQL\SystemDB
+DISK4,Type,SYSTEMDB
+DISK5,DiskSize,500
+DISK5,DiskLabel,TempDB
+DISK5,DiskLetter,T
+DISK5,Path,\MSSQL\TempDB
+DISK5,Type,TEMPDB
+DISK6,DiskSize,00
+DISK6,DiskLabel,SQLBackups
+DISK6,DiskLetter,J
+DISK6,Path,\MSSQL\Backups
+DISK6,Type,Backup
+SQLCONFIG,Version,2016
+SQLCONFIG,Engine,SQL
+SQLCONFIG,ServiceAccount,domainname\svc_OrionSQLAOCL
+SQLCONFIG,ListenerGroup,SQL_AOLN_Creators
+CLUSTERCONFIG,OU,OU=SQL.OU=Computer Resources
+CLUSTERRESOURCE,ClusterIPPD,172.19.16.214
+CLUSTERRESOURCE,ClusterIPDR,172.20.13.224
+CLUSTERRESOURCE,ClusterName,ORIONSSQLAOCL
+CLUSTERRESOURCE,FileShareWitnessPath,\\FILESHAREHOSTNAME\aog
+OSFILES,OSISOSource,\\HOSTNAME\it\Operations\Software\Microsoft\OS\Infrastructure\SW_DVD9_Windows_Svr_Std_and_DataCtr_2012_R2_64Bit_English_-2_Core_MLF_X19-31419.ISO
+OSFILES,OSISODestinationFolder,C:\Temp\
+OSFEATURES,FeatureName,NET-Framework-Core
+OSFEATURES,FeatureName,NET-Framework-Features
+OSFEATURES,FeatureName,Failover-Clustering
+OSFEATURES,FeatureName,Multipath-IO
+OSCONFIG,MSDTC,Enable
+LOCALUSERACCESS,Administrators,AAWH\DBAdmins
+SECURITYPOLICY,SQLServer,SeLockMemoryPrivilege
+SECURITYPOLICY,SQLServer,SeManageVolumePrivilege
+DATACENTER,Location,Primary
+SQLCONFIG,Traceflags,-T1118;-T1204;-T1222;-T3226;-T4199
+SQLFILES,2012,\\HOSTNAME\IT\Operations\Software\Microsoft\BackOffice\SQL\SQL 2012\Enterprise\SW_DVD9_SQL_Svr_Enterprise_Edtn_2012w_SP2_64Bit_English_-2_MLF_X19-74922.ISO
+SQLFILES,2014,\\HOSTNAME\IT\Operations\Software\Microsoft\BackOffice\SQL\SQL 2014\Enterprise\SW_DVD9_SQL_Svr_Enterprise_Edtn_2014_64Bit_English_MLF_X19-34081.ISO
+SQLFILES,2016,\\HOSTNAME\IT\Operations\Software\Microsoft\BackOffice\SQL\SQL 2016\Enterprise\SW_DVD9_NTRL_SQL_Svr_Enterprise_Edtn_2016w_SP1_64Bit_English_OEM_VL_X21-22077.ISO
+SQLPATCHES,2012,\\HOSTNAME\IT\Operations\Software\Microsoft\BackOffice\SQL\SQL 2012\MS SQL 2012 SP3\SQLServer2012SP3-KB3072779-x64-ENU.exe;\\HOSTNAME\IT\Operations\Software\Microsoft\BackOffice\SQL\SQL 2012\CumulativeUpdates
+SQLPATCHES,2014,\\HOSTNAME\IT\Operations\Software\Microsoft\BackOffice\SQL\SQL 2014\MS SQL 2014 SP2;\\HOSTNAME\it\Operations\Software\Microsoft\BackOffice\SQL\SQL 2014\CumluativeUpdates\PostSP2
+SQLPATCHES,2016,
+RUN,ForceFormatDrives,true
+RUN,DriveConfig,true
+RUN,SetOSSettings,true
+RUN,InstallOSFeatures,true
+RUN,InitializeCluster,true
+RUN,CopySQLInstallFiles,true
+RUN,InstallSQLServerRemotely,true
+RUN,NewSQLServerConfiguration,true
